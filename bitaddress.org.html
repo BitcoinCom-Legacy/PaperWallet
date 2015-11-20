@@ -6382,6 +6382,18 @@ Bitcoin.Util = {
 })();
 	</script>
 	<style type="text/css">
+	@font-face {
+		  font-family: 'Titillium Web';
+		  font-style: normal;
+		  font-weight: 400;
+		  src: local('Titillium Web'), local('TitilliumWeb-Regular'), url('fonts/TitilliumWeb-Regular.ttf') format('truetype');
+		}
+		@font-face {
+		  font-family: 'Titillium Web';
+		  font-style: normal;
+		  font-weight: 600;
+		  src: local('Titillium WebSemiBold'), local('TitilliumWeb-SemiBold'), url('fonts/TitilliumWeb-SemiBold.ttf') format('truetype');
+		}
 .more { background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNXG14zYAAAAWdEVYdENyZWF0aW9uIFRpbWUAMDEvMDIvMTLltnQyAAAB1UlEQVQ4jYWTS04bQRCGv3q0x8gMYJCwknCGLDgLVwiH4grhLFaUXdhkQ0A8pBg/FOLpnmbhMYzxRKlNS1Vdf/31V5XknGnb+eXJCBjzbzu9OLu+azu845Opysej4wHmshF4uJ2TUrb3CV0gIBAKRboC5C2vdkDE9fdty6/xDegvXz+NgDbFUejZ+PjDgExmtpxS9vYwMe5u5iyX8RRoa5Ic+C4qx9KUN1MGu4E618yqJ5axAp44KA7ZL3eYzp/HKdVIw7WK8d6BuDvcod9TQlBEIOXEdPlElSoUJabIIs4Z7h9yNDwgqOMayLXw7epHVIBggrsgspZPUBQyiCgugRQji7TAVDF1XB2TlQoOYCqovkmpopS9fcoiM3ue0rOCYf8IU8NklWxiiOQ3EPXtWagIqo6KYWYEc4IGvMViA6RrnCJKVS9B8ypRHG1YKNa0Ur+C+MPt/I2BKWVZUO4FgvQ47PcptEDF+T2Z8TiZUMWIyGtpd+Bze5VTSqP57O/4YG+AN/RXbSiPkwmL5z/be/L+mM4vT2JKeUW7EXD1erMz/Lo4u77f0K9DDhdA1XG11jh9vWBb99Z9gAg5QZ2hzpmUa0RSW4f/gqSY0s3Vz+tufEjvHS8Tg6BXC7qVbQAAAABJRU5ErkJggg==)
 			no-repeat left center; width: 17px; height: 17px; display: inline-block; float: right; cursor: pointer; }
 .less { background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAK6wAACusBgosNWgAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNXG14zYAAAAWdEVYdENyZWF0aW9uIFRpbWUAMDEvMDIvMTLltnQyAAABuklEQVQ4ja2US25TQRBFT336OSEY5ESyBfEakNiLt0AW5S2QvQQxAiZIYBwSz/yByH7dxcB2bPMME+hJS/W5fetWVUtE8K/HfzdcXfdfqsr4onuGuRz4Jrdzcg6Gg9HfQYAxAqmlSMMlQJO5/oliE4AtQLcR++btZQ+wPVsvVXbTfXFGEMyWU9rVM0yMu/Gc5bJ+DdztxWcH3otKVzbPmyq5LnwfzSgEBMxlhqJEBFWVKKUgG66rur53oH7aOeWkUlJSRCBHZracssorlLXttHpCpzonaYukjmsiivDu08daAZIJ7oLIVg9BUQgQUVwSua5Z5AWmiqnj6pisVXAAU0F1J6WK0q6e024Fs4cplbXonFxgapisk00MkdiBqDd7oSKoOiqGmZHMSZrwPRYHIMfaKaKsyhI01oni6IaFYptSyiOIT27nOwaq5FyQrUAIC/nBhK+UErRSos55z4878CrneJyTnHOvquymf3mOb+hvy/jw+QuLh5/NORkORvsGrq77dc6xpr0RcH07y3oF8G04GN0f6HdEDhdA1XG1vXb6dsAa+3Z8AREiQwkoEeQoiBzocHDkf/wnvwC5IpRVsUDNUgAAAABJRU5ErkJggg==)
@@ -6409,6 +6421,7 @@ body, html { margin: 0px; background-color: rgb(244, 244, 244); }
 .answer { padding: 0 15px 10px 25px; text-align: left; display: none; font-size: 80%; }
 .faq { border: 0; border-top: 2px solid #cccccc; }
 .button { margin-left: 5px; margin-right: 5px; }
+
 
 #wallets { clear: both; }
 #btcaddress, #btcprivwif, #detailaddress, #detailaddresscomp, #detailprivwif, #detailprivwifcomp { font-family: monospace; font-size: 1.25em; }
@@ -6634,6 +6647,7 @@ body, html { margin: 0px; background-color: rgb(244, 244, 244); }
     		border-bottom-style: solid;
     		border-bottom-width: 1px;
     		background-color: #FFF;
+    		font-family: 'Titillium Web', sans-serif;
 		}
 		
 		.leftarea {
@@ -6728,6 +6742,100 @@ body, html { margin: 0px; background-color: rgb(244, 244, 244); }
 		.subfooter > ul li a {
     		color: #bdbdbd;
 		}
+		
+		#sidebar {
+			height: calc(100vh - 101px);
+		    width: 210px;
+		    overflow: hidden;
+		    background-color: rgb(250, 250, 250);
+		    position: absolute;
+		    border-right-color: rgb(13, 87, 155);
+		    border-right-style: solid;
+		    border-right-width: 1px;
+		    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=1 );
+		    font-family: 'Titillium Web', sans-serif;
+		}
+		
+		#sidebar h2 {
+			color: #5D5D5D;
+			margin-left: 15px;
+			width: 210px;
+		}
+		
+		#sidebar span.hidebtn {
+			float: right;
+		}
+		
+		#sidebar span.hidebtn i.material-icons {
+			color: #5D5D5D;
+		    font-size: 64px;
+		}
+		
+		#sidebar ul {
+		    padding-left: 15px;
+		    width: 210px;
+		}
+		
+		#sidebar ul li {
+			list-style-type: none;
+		}
+		
+		#sidebar ul li a, #sidebar ul li a:active, #sidebar ul li a:visited {
+			line-height: 30px;
+			color: #5D5D5D;
+    		text-decoration: initial;
+    		font-size: 26px;
+    		font-weight: 400;
+		}
+		
+		#sidebar ul li a:hover {
+			color: #444;
+		}
+		
+		#sidebar ul li a i.material-icons {
+			line-height: 30px;
+    		vertical-align: top;
+		}
+		
+		@font-face {
+		  font-family: 'Material Icons';
+		  font-style: normal;
+		  font-weight: 400;
+		  src: url(fonts/MaterialIcons-Regular.eot); /* For IE6-8 */
+		  src: local('Material Icons'),
+		       local('MaterialIcons-Regular'),
+		       url(fonts/MaterialIcons-Regular.woff2) format('woff2'),
+		       url(fonts/MaterialIcons-Regular.woff) format('woff'),
+		       url(fonts/MaterialIcons-Regular.ttf) format('truetype');
+		}
+		
+		.material-icons {
+		  font-family: 'Material Icons';
+		  font-weight: normal;
+		  font-style: normal;
+		  font-size: 24px;  /* Preferred icon size */
+		  display: inline-block;
+		  width: 1em;
+		  height: 1em;
+		  line-height: 1;
+		  text-transform: none;
+		  letter-spacing: normal;
+		  word-wrap: normal;
+		  white-space: nowrap;
+		  direction: ltr;
+		
+		  /* Support for all WebKit browsers. */
+		  -webkit-font-smoothing: antialiased;
+		  /* Support for Safari and Chrome. */
+		  text-rendering: optimizeLegibility;
+		
+		  /* Support for Firefox. */
+		  -moz-osx-font-smoothing: grayscale;
+		
+		  /* Support for IE. */
+		  font-feature-settings: 'liga';
+		}
+		
 
 	</style>
 </head>
@@ -6757,17 +6865,28 @@ body, html { margin: 0px; background-color: rgb(244, 244, 244); }
 </div>
 <div class="middlearea">
 <h1>Bitcoin Paper Wallet Generator</h1>
-<p style="text-align: center;">Try out our <a href="..">price tool</a> as well.</p>
 </div>
 <div class="rightarea">
-	<a href="https://www.bitcoin.com/choose-your-wallet"><h3>Get a wallet</h3></a>
-	<a href="https://www.bitcoin.com/buy-bitcoin"><h3>Buy Bitcoin</h3></a>
-	<a href="https://news.bitcoin.com"><h3>News</h3></a>
-	<a href="https://forum.bitcoin.com"><h3>Forum</h3></a>
-	<a href="https://wiki.bitcoin.com"><h3>Wiki</h3></a>
-	<a href="https://www.bitcoin.com/advertise"><h3>Advertise</h3></a>
+	
 </div>
 	
+</div>
+<div id="sidebar">
+	<span class="hidebtn"><a href="#"><i class="material-icons">keyboard_arrow_left</i></a></span>
+	<h2 style="margin-top: 60px;">Tools</h2>
+	<ul>
+		<li><a href="/"><i class="material-icons">compare_arrows</i> Price Tool</a></li>
+		<li><a href="paperwallet/"><i class="material-icons">description</i> Paper Wallet</a></li>
+	</ul>
+	<h2>Links</h2>
+	<ul>
+		<li><a href="https://www.bitcoin.com/choose-your-wallet"><i class="material-icons">account_balance_wallet</i> Get a wallet</a></li>
+		<li><a href="https://www.bitcoin.com/buy-bitcoin"><i class="material-icons">business_center</i> Buy Bitcoins</a></li>
+		<li><a href="https://news.bitcoin.com/"><i class="material-icons">announcement</i> News</a></li>
+		<li><a href="https://forum.bitcoin.com/"><i class="material-icons">forum</i> Forum</a></li>
+		<li><a href="https://wiki.bitcoin.com/"><i class="material-icons">create</i> Wiki</a></li>
+		
+	</ul>
 </div>
 	<div id="main">
 		
@@ -12080,6 +12199,7 @@ if (ninja.getQueryString()["testnet"] == "true" || ninja.getQueryString()["testn
 if (ninja.getQueryString()["showseedpool"] == "true" || ninja.getQueryString()["showseedpool"] == "1") {
 	document.getElementById("seedpoolarea").style.display = "block";
 }
+
 	</script>
 </body>
 </html>
