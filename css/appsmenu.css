@@ -1,0 +1,78 @@
+.appbox {
+    z-index: 5000;
+    display: none;
+	position: absolute;
+    background: #FFF;
+    border: 1px solid rgb(139, 139, 139);
+    top: 60px;
+    border-radius: 8px;
+    padding: 5px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    width: 222px;
+    right: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.2);
+}
+.appbox:after, .appbox:before {
+	bottom: 100%;
+	left: calc(100% - 20px);
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.appbox:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-bottom-color: #FFF;
+	border-width: 10px;
+	margin-left: -10px;
+}
+.appbox:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-bottom-color: rgb(139, 139, 139);
+	border-width: 11px;
+	margin-left: -11px;
+}
+
+.appbox h2 {
+	color: #5D5D5D;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	text-align: left;
+	font-family: "museo-sans-rounded";
+	display: inline-block;
+	width: 100%;
+}
+
+.app {
+	width: 64px;
+	height: 64px;
+    text-align: center;
+    display: block;
+    float: left;
+    padding: 5px;
+    padding-top: 10px;
+}
+
+.app:hover {
+}
+
+.app:hover i, .app:hover span {
+	color: rgb(250, 185, 21);
+}
+
+.app i {
+	display: block;
+    font-size: 32px;
+    color: rgb(139, 139, 139);
+}
+
+.app span {
+	color: rgb(139, 139, 139);
+	font-family: "museo-sans-rounded";
+	font-size: 16px;
+}
